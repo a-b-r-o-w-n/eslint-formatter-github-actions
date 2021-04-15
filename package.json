@@ -1,0 +1,53 @@
+{
+  "name": "eslint-formatter-github-actions",
+  "version": "0.0.0",
+  "description": "An Eslint formatter that prints warnings and errors compatible with Github actions file annotations.",
+  "main": "lib/eslint-formatter-github-actions.js",
+  "scripts": {
+    "build": "node build.mjs",
+    "cz": "cz",
+    "lint": "eslint --quiet .",
+    "prepublish": "npm run build",
+    "release": "HUSKY=0 standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-b-r-o-w-n/eslint-formatter-github-actions.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-formatter",
+    "eslintformatter",
+    "lint",
+    "github",
+    "github-actions"
+  ],
+  "author": "Andy Brown <abrown.d.ts@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a-b-r-o-w-n/eslint-formatter-github-actions/issues"
+  },
+  "homepage": "https://github.com/a-b-r-o-w-n/eslint-formatter-github-actions#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.7"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "^3.2.0",
+    "esbuild": "^0.11.11",
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "fs-extra": "^9.1.0",
+    "husky": "^6.0.0",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
+    "standard-version": "^9.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
