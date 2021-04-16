@@ -1,6 +1,6 @@
 {
   "name": "eslint-formatter-github-actions",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "An Eslint formatter that prints warnings and errors compatible with Github actions file annotations.",
   "main": "lib/eslint-formatter-github-actions.js",
   "files": [
