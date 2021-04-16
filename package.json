@@ -34,9 +34,6 @@
     "url": "https://github.com/a-b-r-o-w-n/eslint-formatter-github-actions/issues"
   },
   "homepage": "https://github.com/a-b-r-o-w-n/eslint-formatter-github-actions#readme",
-  "dependencies": {
-    "@actions/core": "^1.2.7"
-  },
   "devDependencies": {
     "@types/eslint": "^7.2.10",
     "@types/fs-extra": "^9.0.11",
