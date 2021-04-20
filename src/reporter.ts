@@ -1,5 +1,6 @@
 import type { ESLint } from "eslint";
 import { formatMessage } from "./formatMessage";
+import { wrapInGroup } from "./wrapInGroup";
 
 function getRelativePath(path: string) {
   const { GITHUB_WORKSPACE } = process.env;
@@ -16,7 +17,7 @@ export default function report(results: ESLint.LintResult[]) {
     const { filePath, messages } = result;
     const relFilePath = getRelativePath(filePath);
 
-    for (const message of messages) {
+    wrapInGroup(relFilePath, messages, (message) => {
       if (!message.ruleId) {
         return;
       }
@@ -33,7 +34,7 @@ export default function report(results: ESLint.LintResult[]) {
         default:
           break;
       }
-    }
+    });
   }
 }
 
